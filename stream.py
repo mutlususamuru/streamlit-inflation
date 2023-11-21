@@ -50,4 +50,4 @@ if page=='Model Bazlı Tahmin':
     st.plotly_chart(fig3)
 if page == "Hakkında":
     
-    st.markdown("""Linkedin:**[Bora Kaya](https://www.linkedin.com/in/bora-kaya/)** """)
+    st.markdown("""**[Linkedin:Bora Kaya](https://www.linkedin.com/in/bora-kaya/)** """)
