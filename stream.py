@@ -51,3 +51,5 @@ if page=='Model Bazlı Tahmin':
 if page == "Hakkında":
     
     st.markdown("""**[Linkedin:Bora Kaya](https://www.linkedin.com/in/bora-kaya/)** """)
+    st.markdown("""**[Github](https://github.com/kaboya19)** """)
+    
