@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 st.set_page_config(page_title="Türkiye Enflasyon Tahmini")
-tabs=["Yıllık Enflasyon","Aylık Enflasyon","Model Bazlı Tahmin"]
+tabs=["Yıllık Enflasyon","Aylık Enflasyon","Model Bazlı Tahmin","Hakkında"]
 page=st.sidebar.radio("Sekmeler",tabs)
 yıllıktahmin=pd.read_csv("yıllıktahmin.csv")
 yıllıktahmin=yıllıktahmin.set_index(yıllıktahmin["Unnamed: 0"])
