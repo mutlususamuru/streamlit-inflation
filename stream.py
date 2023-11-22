@@ -31,7 +31,7 @@ fig1.add_trace(go.Scatter(x=yıllıktahmin.index[10:12],y=[61.94,60.84],mode='ma
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[:12],y=yıllıktahmin["Ortalama"].iloc[:12],mode='lines',name="Enflasyon"))
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[11:27],y=yıllıktahmin["Ortalama"].iloc[11:27],mode='lines',name="Tahmin"))
 fig1.update_traces(line=dict(width=3)) 
-fig1.update_layout(
+fig1.update_layout(font_family="Arial Black",
     font=dict(
                 family="Arial Black",
                 size=14,
@@ -41,7 +41,7 @@ fig1.update_layout(
     yaxis=dict(tickfont=dict(size=14))
     
 )
-fig1.update_xaxes(title_font_family="Arial Black")
+
 
 fig1.update_layout(width=800, height=600)  
 fig2 = go.Figure()
