@@ -52,8 +52,6 @@ if page=='Model Bazlı Tahmin':
 if page == "Hakkında":
     st.write("Geliştirici : Bora Kaya")
 
-    st.markdown("""**[Metodoloji](https://bit.ly/inflationforecast)** """)
-
     st.markdown("""**[Inflation Forecast Twitter](https://twitter.com/AiInflatio15273)** """)
 
     st.markdown("""**[Linkedin](https://www.linkedin.com/in/bora-kaya/)** """)
@@ -61,9 +59,39 @@ if page == "Hakkında":
     st.markdown("""**[Github](https://github.com/kaboya19/)** """)
 
 if page == "Metodoloji":
-    st.markdown("<h1 style='text-align:center;'>Metodoloji</h1>",unsafe_allow_html=True)
-    st.write("Tahmin için 17 adet ekonomik veri kullanılmaktadır.<br>1)3 Aylık USD/TL Hareketli Ortalaması")
+    st.markdown("<div style='text-align: left;'>"
+            "<h1>Metodoloji</h1>"
+            "<p>Tahmin için 17 adet ekonomik veri kullanılmaktadır.</p>"
+            "<p>1) 3 Aylık USD/TL Hareketli Ortalaması</p>"
+            "<p>2) M2 Para Arzı (1 ay gecikmeli)</p>"
+            "<p>3) M3 Para Arzı (1 ay gecikmeli)</p>"
+            "<p>4) Motorin Fiyatı</p>"
+            "<p>5) Politika Faizi</p>"
+            "<p>6) Ortalama Kredi Faizi</p>"
+            "<p>7) Ortalama 3 Aylık Mevduat Faizi</p>"
+            "<p>8) Kamu Borç Stoğu</p>"
+            "<p>9) Sanayi Üretim Endeksi</p>"
+            "<p>10) Perakende Satış Hacmi</p>"
+            "<p>11) Toplam Kredi Hacmi</p>"
+            "<p>12) Asgari Ücret Zam Oranı (Sadece zam yapılan aylar)</p>"
+            "<p>13) Enflasyon Belirsizliği (TCMB Piyasa Katılımcıları Anketi 12 Ay Sonrası Enflasyon Beklentilerinin Standart Sapması)</p>"
+            "<p>14) Reel Efektif Döviz Kuru (TÜFE Bazlı)</p>"
+            "<p>15) Reel Efektif Döviz Kuru (ÜFE Bazlı)</p>"
+            "<p>16) İşsizlik</p>"
+            "<p>17) Enflasyon Şoku (Her yıl için yıllık ortalamanın üzerinde enflasyon artışı yaşanan aylar 1, diğerleri 0 olacak şekilde işaretlenmiştir.)</p>"
+            "<p>18) Aylık Enflasyon</p>"
+            "<p>Modelleri eğitmek ve optimize edebilmek için veri setinden son 3 ay çıkarılmış, bu son 3 ayı en iyi tahmin edebilecek şekilde bu özellikler arasından özellik seçimi ve parametre optimizasyonu yapılmıştır. Sonrasında her bir bağımsız değişkenin gelecek değerleri zaman serisi modelleriyle tahmin edilmiş, bunlar modellere gönderilerek gelecek aylara ait enflasyon değerleri tahmin edilmiştir.</p>"
+            "<p>Kullanılan Modeller:</p>"
+            "<p>1) Lineer Regresyon</p>"
+            "<p>2) Bayesian Regresyon</p>"
+            "<p>3) Gaussian Regresyon</p>"
+            "<p>4) Kernel Regresyon</p>"
+            "<p>5) Lasso Regresyon</p>"
+            "<p>6) Lars Regresyon</p>"
+            "<p>7) SGD Regresyon</p>"
+            "</div>", unsafe_allow_html=True)
 
-    
+
+   
 
     
