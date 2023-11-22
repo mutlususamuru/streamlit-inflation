@@ -34,8 +34,7 @@ fig1.update_traces(line=dict(width=3))
 fig1.update_layout(
     xaxis=dict(tickfont=dict(size=14)),  
     yaxis=dict(tickfont=dict(size=14)),
-    font_color="black"  ,
-    font=dict(size=18)
+    font_color="black"
 )
 fig1.update_yaxes(title_font_family="Arial")
 fig1.update_xaxes(title_font_family="Arial")
