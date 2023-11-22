@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 st.set_page_config(page_title="Türkiye Enflasyon Tahmini")
-tabs=["Yıllık Enflasyon","Aylık Enflasyon","Model Bazlı Tahmin","Hakkında"]
+tabs=["Yıllık Enflasyon","Aylık Enflasyon","Model Bazlı Tahmin","Metodoloji","Hakkında"]
 page=st.sidebar.radio("Sekmeler",tabs)
 yıllıktahmin=pd.read_csv("yıllıktahmin.csv")
 yıllıktahmin=yıllıktahmin.set_index(yıllıktahmin["Unnamed: 0"])
@@ -51,7 +51,7 @@ if page=='Model Bazlı Tahmin':
     st.plotly_chart(fig3)
 if page == "Hakkında":
     st.write("Geliştirici : Bora Kaya")
-    
+
     st.markdown("""**[Metodoloji](https://bit.ly/inflationforecast)** """)
 
     st.markdown("""**[Inflation Forecast Twitter](https://twitter.com/AiInflatio15273)** """)
@@ -59,5 +59,11 @@ if page == "Hakkında":
     st.markdown("""**[Linkedin](https://www.linkedin.com/in/bora-kaya/)** """)
 
     st.markdown("""**[Github](https://github.com/kaboya19/)** """)
+
+if page == "Metodoloji":
+    st.markdown("<h1 style='text-align:center;'>Metodoloji</h1>",unsafe_allow_html=True)
+    st.write("Tahmin için 17 adet ekonomik veri kullanılmaktadır.<br>1)3 Aylık USD/TL Hareketli Ortalaması")
+
+    
 
     
