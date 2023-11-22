@@ -37,8 +37,10 @@ fig3 = go.FigureWidget(data=[
 go.Scatter(x=yıllıktahmin["Ortalama"].iloc[:12].index,y=yıllıktahmin["Ortalama"].iloc[:12],mode='lines',name="Enflasyon"),
 go.Scatter(x=yıllıktahmin["Minimum"].iloc[11:].index,y=yıllıktahmin["Minimum"].iloc[11:],mode='lines',name="SGD Regressor",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Maksimum"].iloc[11:].index,y=yıllıktahmin["Maksimum"].iloc[11:],mode='lines',name="Lasso Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[11:].index,y=yıllıktahmin["Lasso Regression"].iloc[11:],mode='lines',name="Lars Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[11:].index,y=yıllıktahmin["Lars Regression"].iloc[11:],mode='lines',name="Gaussian Regression",line={'dash':'dash'})
+go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[11:].index,y=yıllıktahmin["Lasso Regression"].iloc[11:],mode='lines',name="Lasso Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[11:].index,y=yıllıktahmin["Lars Regression"].iloc[11:],mode='lines',name="Lars Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Kernel Regression"].iloc[11:].index,y=yıllıktahmin["Kernel Regression"].iloc[11:],mode='lines',name="Kernel Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[11:].index,y=yıllıktahmin["Bayessian Regression"].iloc[11:],mode='lines',name="Bayessian Regression",line={'dash':'dash'})
 ])
 if page=='Yıllık Enflasyon':
     st.markdown("<h1 style='text-align:center;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
