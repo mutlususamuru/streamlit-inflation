@@ -36,9 +36,7 @@ fig1.update_layout(font_family="Arial Black",
                 family="Arial Black",
                 size=14,
                 color='#000000'
-            ),
-    xaxis=dict(tickfont=dict(size=14)),  
-    yaxis=dict(tickfont=dict(size=14))
+            )
     
 )
 
