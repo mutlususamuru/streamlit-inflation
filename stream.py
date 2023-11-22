@@ -39,6 +39,11 @@ fig1.update_layout(width=800, height=600)
 fig2 = go.Figure()
 fig2.add_trace(go.Scatter(x=aylık.iloc[:118].index,y=aylık.iloc[:118,0],mode='lines',name="Aylık Enflasyon"))
 fig2.add_trace(go.Scatter(x=aylık.iloc[117:].index,y=aylık.iloc[117:,0],mode='lines',name="Aylık Enflasyon Tahmini"))
+fig2.update_traces(line=dict(width=3)) 
+fig2.update_layout(
+    xaxis=dict(tickfont=dict(size=14, weight='bold')),  
+    yaxis=dict(tickfont=dict(size=14, weight='bold'))   
+)
 fig3 = go.FigureWidget(data=[
 go.Scatter(x=yıllıktahmin["Ortalama"].iloc[:12].index,y=yıllıktahmin["Ortalama"].iloc[:12],mode='lines',name="Enflasyon"),
 go.Scatter(x=yıllıktahmin["Minimum"].iloc[11:].index,y=yıllıktahmin["Minimum"].iloc[11:],mode='lines',name="Gaussian Regression",line={'dash':'dash'}),
@@ -48,6 +53,11 @@ go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[11:].index,y=yıllıktahmin[
 go.Scatter(x=yıllıktahmin["Kernel Regression"].iloc[11:].index,y=yıllıktahmin["Kernel Regression"].iloc[11:],mode='lines',name="Kernel Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[11:].index,y=yıllıktahmin["Bayessian Regression"].iloc[11:],mode='lines',name="Bayessian Regression",line={'dash':'dash'})
 ])
+fig3.update_traces(line=dict(width=3)) 
+fig3.update_layout(
+    xaxis=dict(tickfont=dict(size=14, weight='bold')),  
+    yaxis=dict(tickfont=dict(size=14, weight='bold'))   
+)
 if page=='Yıllık Enflasyon':
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
