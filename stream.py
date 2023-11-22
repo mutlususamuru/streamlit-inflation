@@ -35,8 +35,8 @@ fig1.update_layout(
     xaxis=dict(tickfont=dict(size=14)),  
     yaxis=dict(tickfont=dict(size=14))   
 )
-fig1.update_yaxes(tickfont_family="Arial Black")
-fig1.update_xaxes(tickfont_family="Arial Black")
+fig1.update_yaxes(tickfont_family="Arial Black",color="Black")
+fig1.update_xaxes(tickfont_family="Arial Black",color="Black")
 fig1.update_layout(width=800, height=600)  
 fig2 = go.Figure()
 fig2.add_trace(go.Scatter(x=aylık.iloc[:118].index,y=aylık.iloc[:118,0],mode='lines',name="Aylık Enflasyon"))
