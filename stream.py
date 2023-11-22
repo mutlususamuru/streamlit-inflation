@@ -32,17 +32,19 @@ fig1.add_trace(go.Scatter(x=yıllıktahmin.index[:12],y=yıllıktahmin["Ortalama
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[11:27],y=yıllıktahmin["Ortalama"].iloc[11:27],mode='lines',name="Tahmin"))
 fig1.update_traces(line=dict(width=3)) 
 fig1.update_layout(
-    xaxis=dict(tickfont=dict(size=14, bold='bold')),  
-    yaxis=dict(tickfont=dict(size=14, bold='bold'))   
+    xaxis=dict(tickfont=dict(size=14)),  
+    yaxis=dict(tickfont=dict(size=14))   
 )
+fig1.update_yaxes(tickfont_family="Arial Black")
+fig1.update_xaxes(tickfont_family="Arial Black")
 fig1.update_layout(width=800, height=600)  
 fig2 = go.Figure()
 fig2.add_trace(go.Scatter(x=aylık.iloc[:118].index,y=aylık.iloc[:118,0],mode='lines',name="Aylık Enflasyon"))
 fig2.add_trace(go.Scatter(x=aylık.iloc[117:].index,y=aylık.iloc[117:,0],mode='lines',name="Aylık Enflasyon Tahmini"))
 fig2.update_traces(line=dict(width=3)) 
 fig2.update_layout(
-    xaxis=dict(tickfont=dict(size=14, bold='bold')),  
-    yaxis=dict(tickfont=dict(size=14, bold='bold'))   
+    xaxis=dict(tickfont=dict(size=14)),  
+    yaxis=dict(tickfont=dict(size=14))   
 )
 fig3 = go.FigureWidget(data=[
 go.Scatter(x=yıllıktahmin["Ortalama"].iloc[:12].index,y=yıllıktahmin["Ortalama"].iloc[:12],mode='lines',name="Enflasyon"),
@@ -55,8 +57,8 @@ go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[11:].index,y=yıllıkta
 ])
 fig3.update_traces(line=dict(width=3)) 
 fig3.update_layout(
-    xaxis=dict(tickfont=dict(size=14, bold='bold')),  
-    yaxis=dict(tickfont=dict(size=14, bold='bold'))   
+    xaxis=dict(tickfont=dict(size=14)),  
+    yaxis=dict(tickfont=dict(size=14))   
 )
 if page=='Yıllık Enflasyon':
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
