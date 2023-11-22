@@ -35,10 +35,10 @@ fig2.add_trace(go.Scatter(x=aylık.iloc[:118].index,y=aylık.iloc[:118,0],mode='
 fig2.add_trace(go.Scatter(x=aylık.iloc[117:].index,y=aylık.iloc[117:,0],mode='lines',name="Aylık Enflasyon Tahmini"))
 fig3 = go.FigureWidget(data=[
 go.Scatter(x=yıllıktahmin["Ortalama"].iloc[:12].index,y=yıllıktahmin["Ortalama"].iloc[:12],mode='lines',name="Enflasyon"),
-go.Scatter(x=yıllıktahmin["Minimum"].iloc[11:].index,y=yıllıktahmin["Minimum"].iloc[11:],mode='lines',name="SGD Regressor"),
-go.Scatter(x=yıllıktahmin["Maksimum"].iloc[11:].index,y=yıllıktahmin["Maksimum"].iloc[11:],mode='lines',name="Lasso Regression"),
-go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[11:].index,y=yıllıktahmin["Lasso Regression"].iloc[11:],mode='lines',name="Lars Regression"),
-go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[11:].index,y=yıllıktahmin["Lars Regression"].iloc[11:],mode='lines',name="Gaussian Regression")
+go.Scatter(x=yıllıktahmin["Minimum"].iloc[11:].index,y=yıllıktahmin["Minimum"].iloc[11:],mode='lines',name="SGD Regressor",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Maksimum"].iloc[11:].index,y=yıllıktahmin["Maksimum"].iloc[11:],mode='lines',name="Lasso Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[11:].index,y=yıllıktahmin["Lasso Regression"].iloc[11:],mode='lines',name="Lars Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[11:].index,y=yıllıktahmin["Lars Regression"].iloc[11:],mode='lines',name="Gaussian Regression",line={'dash':'dash'})
 ])
 if page=='Yıllık Enflasyon':
     st.markdown("<h1 style='text-align:center;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
