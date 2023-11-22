@@ -50,9 +50,12 @@ if page=='Model Bazlı Tahmin':
     st.markdown("<h1 style='text-align:center;'>Model Bazlı Tahmin</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig3)
 if page == "Hakkında":
-    st.write("Geliştirici:Bora Kaya")
+    st.write("Geliştirici : Bora Kaya")
+    
     st.markdown("""**[Metodoloji](https://bit.ly/inflationforecast)** """)
+
     st.markdown("""**[Inflation Forecast Twitter](https://twitter.com/AiInflatio15273)** """)
+
     st.markdown("""**[Linkedin](https://www.linkedin.com/in/bora-kaya/)** """)
 
     st.markdown("""**[Github](https://github.com/kaboya19/)** """)
