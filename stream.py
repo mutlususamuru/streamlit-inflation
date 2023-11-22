@@ -44,13 +44,13 @@ go.Scatter(x=yıllıktahmin["Kernel Regression"].iloc[11:].index,y=yıllıktahmi
 go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[11:].index,y=yıllıktahmin["Bayessian Regression"].iloc[11:],mode='lines',name="Bayessian Regression",line={'dash':'dash'})
 ])
 if page=='Yıllık Enflasyon':
-    st.markdown("<h1 style='text-align:center;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
-    st.markdown("<h1 style='text-align:center;'>Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align:left;'>Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig2)
 if page=='Model Bazlı Tahmin':
-    st.markdown("<h1 style='text-align:center;'>Model Bazlı Tahmin</h1>",unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align:left;'>Model Bazlı Tahmin</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig3)
 if page == "Hakkında":
     st.write("Geliştirici : Bora Kaya")
