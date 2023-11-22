@@ -33,7 +33,7 @@ fig1.add_trace(go.Scatter(x=yıllıktahmin.index[11:27],y=yıllıktahmin["Ortala
 fig1.update_traces(line=dict(width=3)) 
 fig1.update_layout(font_family="Arial Black",
                    font_color="black",
-                   size="14"
+                   font_size="14"
     
 )
 
