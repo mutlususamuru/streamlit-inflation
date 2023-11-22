@@ -32,8 +32,14 @@ fig1.add_trace(go.Scatter(x=yıllıktahmin.index[:12],y=yıllıktahmin["Ortalama
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[11:27],y=yıllıktahmin["Ortalama"].iloc[11:27],mode='lines',name="Tahmin"))
 fig1.update_traces(line=dict(width=3)) 
 fig1.update_layout(
+    font=dict(
+                family="Arial",
+                size=14,
+                color='#000000'
+            ),
     xaxis=dict(tickfont=dict(size=14)),  
-    yaxis=dict(tickfont=dict(size=14))   
+    yaxis=dict(tickfont=dict(size=14))
+    
 )
 fig1.update_yaxes(tickfont_family="Arial")
 fig1.update_xaxes(title_font_family="Arial")
