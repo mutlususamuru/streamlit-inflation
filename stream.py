@@ -36,9 +36,9 @@ fig2.add_trace(go.Scatter(x=aylık.iloc[117:].index,y=aylık.iloc[117:,0],mode='
 fig3 = go.Figure()
 fig3.add_trace(go.Scatter(x=yıllıktahmin["Ortalama"].iloc[:12].index,y=yıllıktahmin["Ortalama"].iloc[:12],mode='lines',name="Enflasyon"))
 fig3.add_trace(go.Scatter(x=yıllıktahmin["Minimum"].iloc[11:].index,y=yıllıktahmin["Minimum"].iloc[11:],mode='lines',name="SGD Regressor"))
-fig3.add_trace(go.Scatter(x=yıllıktahmin["Maksimum"].index,y=yıllıktahmin["Maksimum"],mode='lines',name="Lasso Regression"))
-fig3.add_trace(go.Scatter(x=yıllıktahmin["Lasso Regression"].index,y=yıllıktahmin["Lasso Regression"],mode='lines',name="Lars Regression"))
-fig3.add_trace(go.Scatter(x=yıllıktahmin["Lars Regression"].index,y=yıllıktahmin["Lars Regression"],mode='lines',name="Gaussian Regression"))
+fig3.add_trace(go.Scatter(x=yıllıktahmin["Maksimum"].iloc[11:].index,y=yıllıktahmin["Maksimum"].iloc[11:],mode='lines',name="Lasso Regression"))
+fig3.add_trace(go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[11:].index,y=yıllıktahmin["Lasso Regression"].iloc[11:],mode='lines',name="Lars Regression"))
+fig3.add_trace(go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[11:].index,y=yıllıktahmin["Lars Regression"].iloc[11:],mode='lines',name="Gaussian Regression"))
 if page=='Yıllık Enflasyon':
     st.markdown("<h1 style='text-align:center;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
