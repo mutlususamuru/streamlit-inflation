@@ -33,12 +33,12 @@ fig1.add_trace(go.Scatter(x=yıllıktahmin.index[11:27],y=yıllıktahmin["Ortala
 fig1.update_traces(line=dict(width=3)) 
 fig1.update_layout(
     font=dict(
-                family="Segoe UI Black",
+                family="Arial Black",
                 size=14,
                 color='#000000'
             ),
-    xaxis=dict(tickfont=dict(size=14)),  
-    yaxis=dict(tickfont=dict(size=14))
+    xaxis=dict(tickfont=dict(size=14),family="Arial Black"),  
+    yaxis=dict(tickfont=dict(size=14),family="Arial Black")
     
 )
 
