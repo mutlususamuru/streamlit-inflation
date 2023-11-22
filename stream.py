@@ -37,10 +37,11 @@ fig1.update_layout(
                 size=14,
                 color='#000000'
             ),
-    xaxis=dict(tickfont=dict(size=14),family="Arial Black"),  
-    yaxis=dict(tickfont=dict(size=14),family="Arial Black")
+    xaxis=dict(tickfont=dict(size=14)),  
+    yaxis=dict(tickfont=dict(size=14))
     
 )
+fig1.update_xaxes(title_font_family="Arial Black")
 
 fig1.update_layout(width=800, height=600)  
 fig2 = go.Figure()
