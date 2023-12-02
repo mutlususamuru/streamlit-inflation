@@ -103,7 +103,7 @@ if page == "Metodoloji":
             "<p>16) İşsizlik</p>"
             "<p>17) Enflasyon Şoku (Her yıl için yıllık ortalamanın üzerinde enflasyon artışı yaşanan aylar 1, diğerleri 0 olacak şekilde işaretlenmiştir.)</p>"
             "<p>18) Aylık Enflasyon</p>"
-            "<p>Modelleri eğitmek ve optimize edebilmek için veri setinden son 3 ay çıkarılmış, bu son 3 ayı en iyi tahmin edebilecek şekilde bu özellikler arasından özellik seçimi ve parametre optimizasyonu yapılmıştır. Sonrasında her bir bağımsız değişkenin gelecek değerleri zaman serisi modelleriyle tahmin edilmiş, bunlar modellere gönderilerek gelecek aylara ait enflasyon değerleri tahmin edilmiştir.</p>"
+            "<p>Modelleri eğitmek ve optimize edebilmek için veri setinden son 3 ay çıkarılmış, bu son 3 ayı en iyi tahmin edebilecek şekilde bu özellikler arasından özellik seçimi ve parametre optimizasyonu yapılmıştır. Sonrasında her bir bağımsız değişkenin gelecek değerleri Prophet modeliyle tahmin edilmiş, bunlar modellere gönderilerek gelecek aylara ait enflasyon değerleri tahmin edilmiştir.</p>"
             "<p>Kullanılan Modeller:</p>"
             "<p>1) Lineer Regresyon</p>"
             "<p>2) Bayesian Regresyon</p>"
@@ -112,6 +112,7 @@ if page == "Metodoloji":
             "<p>5) Lasso Regresyon</p>"
             "<p>6) Lars Regresyon</p>"
             "<p>7) SGD Regresyon</p>"
+            "<p>7) LSTM</p>"
             "</div>", unsafe_allow_html=True)
 
 
