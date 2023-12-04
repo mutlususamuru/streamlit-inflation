@@ -27,9 +27,9 @@ del dfas["Unnamed: 0"]
 dfas=dfas.rename_axis(["Tarih"])
 
 fig1 = go.Figure()
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[10:13],y=[61.94,60.84,62.18],mode='markers',name="Geçmiş Tahminler",zorder=3))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[:13],y=yıllıktahmin["Ortalama"].iloc[:13],mode='lines',name="Enflasyon",zorder=2))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[12:27],y=yıllıktahmin["Ortalama"].iloc[12:27],mode='lines',name="Tahmin",zorder=2))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[10:13],y=[61.94,60.84,62.18],mode='markers',name="Geçmiş Tahminler",marker=go.Marker(color='crimson')))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[:13],y=yıllıktahmin["Ortalama"].iloc[:13],mode='lines',name="Enflasyon"))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[12:27],y=yıllıktahmin["Ortalama"].iloc[12:27],mode='lines',name="Tahmin"))
 fig1.update_traces(line=dict(width=3)) 
 fig1.update_layout(font_family="Arial Black",
                    font_color="black",
