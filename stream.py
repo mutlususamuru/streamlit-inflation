@@ -27,9 +27,9 @@ del dfas["Unnamed: 0"]
 dfas=dfas.rename_axis(["Tarih"])
 
 fig1 = go.Figure()
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[10:12],y=[61.94,60.84],mode='markers',name="Geçmiş Tahminler"))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[:12],y=yıllıktahmin["Ortalama"].iloc[:12],mode='lines',name="Enflasyon"))
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[11:27],y=yıllıktahmin["Ortalama"].iloc[11:27],mode='lines',name="Tahmin"))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[10:13],y=[61.94,60.84,62.18],mode='markers',name="Geçmiş Tahminler"))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[:13],y=yıllıktahmin["Ortalama"].iloc[:12],mode='lines',name="Enflasyon"))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[12:27],y=yıllıktahmin["Ortalama"].iloc[12:27],mode='lines',name="Tahmin"))
 fig1.update_traces(line=dict(width=3)) 
 fig1.update_layout(font_family="Arial Black",
                    font_color="black",
@@ -40,23 +40,23 @@ fig1.update_layout(font_family="Arial Black",
 
 fig1.update_layout(width=800, height=600)  
 fig2 = go.Figure()
-fig2.add_trace(go.Scatter(x=aylık.iloc[:118].index,y=aylık.iloc[:118,0],mode='lines',name="Aylık Enflasyon"))
-fig2.add_trace(go.Scatter(x=aylık.iloc[117:].index,y=aylık.iloc[117:,0],mode='lines',name="Aylık Enflasyon Tahmini"))
+fig2.add_trace(go.Scatter(x=aylık.iloc[:119].index,y=aylık.iloc[:119,0],mode='lines',name="Aylık Enflasyon"))
+fig2.add_trace(go.Scatter(x=aylık.iloc[118:].index,y=aylık.iloc[118:,0],mode='lines',name="Aylık Enflasyon Tahmini"))
 fig2.update_traces(line=dict(width=3)) 
 fig2.update_layout(
     xaxis=dict(tickfont=dict(size=14)),  
     yaxis=dict(tickfont=dict(size=14))   
 )
 fig3 = go.FigureWidget(data=[
-go.Scatter(x=yıllıktahmin["Ortalama"].iloc[:12].index,y=yıllıktahmin["Ortalama"].iloc[:12],mode='lines',name="Enflasyon"),
-go.Scatter(x=yıllıktahmin["Gaussian Regression"].iloc[11:].index,y=yıllıktahmin["Minimum"].iloc[11:],mode='lines',name="Gaussian Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["SGD Regressor"].iloc[11:].index,y=yıllıktahmin["Maksimum"].iloc[11:],mode='lines',name="SGD Regressor",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[11:].index,y=yıllıktahmin["Lasso Regression"].iloc[11:],mode='lines',name="Lasso Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[11:].index,y=yıllıktahmin["Lars Regression"].iloc[11:],mode='lines',name="Lars Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Kernel Regression"].iloc[11:].index,y=yıllıktahmin["Kernel Regression"].iloc[11:],mode='lines',name="Kernel Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[11:].index,y=yıllıktahmin["Bayessian Regression"].iloc[11:],mode='lines',name="Bayessian Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["LSTM"].iloc[11:].index,y=yıllıktahmin["LSTM"].iloc[11:],mode='lines',name="LSTM",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Linear Regression"].iloc[11:].index,y=yıllıktahmin["Linear Regression"].iloc[11:],mode='lines',name="Linear Regression",line={'dash':'dash'})
+go.Scatter(x=yıllıktahmin["Ortalama"].iloc[:13].index,y=yıllıktahmin["Ortalama"].iloc[:13],mode='lines',name="Enflasyon"),
+go.Scatter(x=yıllıktahmin["Gaussian Regression"].iloc[12:].index,y=yıllıktahmin["Minimum"].iloc[12:],mode='lines',name="Gaussian Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["SGD Regressor"].iloc[12:].index,y=yıllıktahmin["Maksimum"].iloc[12:],mode='lines',name="SGD Regressor",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[12:].index,y=yıllıktahmin["Lasso Regression"].iloc[12:],mode='lines',name="Lasso Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[12:].index,y=yıllıktahmin["Lars Regression"].iloc[12:],mode='lines',name="Lars Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Kernel Regression"].iloc[12:].index,y=yıllıktahmin["Kernel Regression"].iloc[12:],mode='lines',name="Kernel Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[12:].index,y=yıllıktahmin["Bayessian Regression"].iloc[12:],mode='lines',name="Bayessian Regression",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["LSTM"].iloc[12:].index,y=yıllıktahmin["LSTM"].iloc[12:],mode='lines',name="LSTM",line={'dash':'dash'}),
+go.Scatter(x=yıllıktahmin["Linear Regression"].iloc[12:].index,y=yıllıktahmin["Linear Regression"].iloc[12:],mode='lines',name="Linear Regression",line={'dash':'dash'})
 ])
 fig3.update_traces(line=dict(width=3)) 
 fig3.update_layout(
