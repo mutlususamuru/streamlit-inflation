@@ -114,7 +114,9 @@ if page == "Metodoloji":
             "<p>5) Lasso Regresyon</p>"
             "<p>6) Lars Regresyon</p>"
             "<p>7) SGD Regresyon</p>"
-            "<p>7) LSTM</p>"
+            "<p>8) LSTM</p>"
+            "<p>9) Gradient Boosting Regressor</p>"
+            "<p>10) Decision Tree Regressor</p>"
             "</div>", unsafe_allow_html=True)
 
 
