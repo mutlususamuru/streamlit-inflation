@@ -56,8 +56,6 @@ go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[12:].index,y=yıllıktahmin[
 go.Scatter(x=yıllıktahmin["Kernel Regression"].iloc[12:].index,y=yıllıktahmin["Kernel Regression"].iloc[12:],mode='lines',name="Kernel Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[12:].index,y=yıllıktahmin["Bayessian Regression"].iloc[12:],mode='lines',name="Bayessian Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["LSTM"].iloc[12:].index,y=yıllıktahmin["LSTM"].iloc[12:],mode='lines',name="LSTM",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Decision Tree Regressor"].iloc[12:].index,y=yıllıktahmin["Decision Tree Regressor"].iloc[12:],mode='lines',name="Decision Tree Regressor",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["Gradient Boosting Regressor"].iloc[12:].index,y=yıllıktahmin["Gradient Boosting Regressor"].iloc[12:],mode='lines',name="Gradient Boosting Regressor",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Linear Regression"].iloc[12:].index,y=yıllıktahmin["Linear Regression"].iloc[12:],mode='lines',name="Linear Regression",line={'dash':'dash'})
 ])
 fig3.update_traces(line=dict(width=3)) 
