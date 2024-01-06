@@ -44,7 +44,7 @@ fig1.update_traces(line=dict(width=3))
 
 fig1.update_layout(
     xaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),  
-    yaxis=dict(tickfont=dict(size=14)),
+    yaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),
     font=dict(family="Arial", size=14, color="black")
 )
 
@@ -93,7 +93,7 @@ go.Scatter(x=yıllıktahmin["Robust Regression"].iloc[23:-2].index,y=yıllıktah
 fig3.update_traces(line=dict(width=3)) 
 fig3.update_layout(
     xaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),  
-    yaxis=dict(tickfont=dict(size=14)),
+    yaxis=dict(tickfont=dict(size=14), family="Arial Black", color="black"),
     font=dict(family="Arial", size=14, color="black")
 )
 fig3.update_xaxes(
