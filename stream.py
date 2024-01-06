@@ -135,6 +135,7 @@ if page=='Model Bazlı Aylık Tahmin':
     labels={'y': 'Tahmin','x':'Model'},
     title="Model Predictions"
 )
+       fig4.update_layout(showlegend=False)
 
 # Update layout
          
@@ -145,7 +146,7 @@ if page=='Model Bazlı Aylık Tahmin':
 )
    
        
-       fig4.update_layout(width=len(sorted_modelaylık.columns) * 100,showlegend=False)
+       fig4.update_layout(width=len(sorted_modelaylık.columns) * 100)
        st.plotly_chart(fig4)  
 
     
