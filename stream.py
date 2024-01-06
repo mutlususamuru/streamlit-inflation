@@ -120,19 +120,19 @@ if page=='Model Bazlı Aylık Tahmin':
     selected_model = st.sidebar.selectbox("Tarih", ["Ocak 2024", "Other"])
     if selected_model=='Ocak 2024':
        sorted_index = modelaylık.iloc[0, :].sort_values(ascending=False).index
+
+# Sort the DataFrame columns based on the sorted index
        sorted_modelaylık = modelaylık[sorted_index]
+
+# Set custom colors for each bar
        custom_colors = px.colors.qualitative.Set1[:len(sorted_modelaylık.columns)]
        fig4 = go.Figure()
        for col, color in zip(sorted_modelaylık.columns, custom_colors):
-         values = [sorted_modelaylık.iloc[0, :][col]]
-         text_values = [f'{value:.2f}' for value in values]  # Format values to two decimal places
          fig4.add_trace(go.Bar(
         x=[col],
-        y=values,
+        y=[sorted_modelaylık.iloc[0, :][col]],
         marker_color=color,
-        name=col,  # Use the column name as the trace name
-        text=text_values,  # Display values on top of each bar
-        textposition='outside',  # Position text outside the bar
+        name=col  # Use the column name as the trace name
     ))
 
 # Update layout
