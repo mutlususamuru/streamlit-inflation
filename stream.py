@@ -141,7 +141,7 @@ if page=='Model Bazlı Aylık Tahmin':
        title="Ocak Ayı Enflasyon Tahmini",
        showlegend=False
 )
-       fig4.update_traces(texttemplate='%{text:.2f}', textposition='inside', textangle=-90)
+       fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=-45)
        fig4.update_layout(width=len(sorted_modelaylık.columns) * 100)
        st.plotly_chart(fig4) 
     if selected_model=='Şubat 2024':
