@@ -90,8 +90,10 @@ fig3.update_traces(line=dict(width=3))
 fig3.update_layout(
     xaxis=dict(tickfont=dict(size=14)),  
     yaxis=dict(tickfont=dict(size=14)),
-    font=dict(family="Arial", size=14, color="black", weight="bold")
+    font=dict(family="Arial Black", size=14, color="black", weight="bold")
 )
+       
+
 
 
 
