@@ -37,8 +37,8 @@ fig1.update_layout(font_family="Arial Black",
                    font_size=14
 
 )
-last_12_months = aylık.iloc[:-12]
-fig2 = px.bar(last_12_months, x=last_12_months.index, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'}, title="Actual Data")
+last_12_months = aylık.iloc[-24:-12]
+fig2 = px.bar(last_12_months, x=last_12_months.index, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'})
 
 # Filter the next 12 months for predictions
 next_12_months = aylık.iloc[-12:].copy()
