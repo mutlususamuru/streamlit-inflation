@@ -130,7 +130,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
     y=sorted_modelaylık.iloc[0, :].values,
-    text=sorted_modelaylık.iloc[0, :].values
+    text=sorted_modelaylık.iloc[0, :].values,
     color=np.arange(len(sorted_modelaylık.columns)),
     color_continuous_scale='Rainbow',
     labels={'y': 'Tahmin','x':'Model'},
