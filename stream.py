@@ -38,15 +38,15 @@ fig1.update_layout(font_family="Arial Black",
 
 )
 last_12_months = aylık.iloc[:-12]
-fig = px.bar(last_12_months, x=last_12_months.index, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'}, title="Actual Data")
+fig2 = px.bar(last_12_months, x=last_12_months.index, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'}, title="Actual Data")
 
 # Filter the next 12 months for predictions
 next_12_months = aylık.iloc[-12:].copy()
 
-fig.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon"], name="Tahmin"))
+fig2.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon"], name="Tahmin"))
 
 # Show the combined figure
-fig.show()
+
 
 
 
