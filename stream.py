@@ -136,6 +136,7 @@ if page=='Model Bazlı Aylık Tahmin':
     labels={'y': 'Tahmin','x':'Model'},
     title="Model Predictions"
 )
+       fig1.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
        title="Ocak Ayı Enflasyon Tahmini",
