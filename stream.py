@@ -37,17 +37,15 @@ fig1.update_layout(font_family="Arial Black",
                    font_size=14
 
 )
+fig2 = go.Figure(go.Bar(
+    x=aylık.index[-12:],
+    y=aylık[-12:],
+    marker_color='red'
+))
 
 
 fig1.update_layout(width=800, height=600)  
-fig2 = go.Figure()
-fig2.add_trace(go.Scatter(x=aylık.iloc[:119].index,y=aylık.iloc[:119,0],mode='lines',name="Aylık Enflasyon"))
-fig2.add_trace(go.Scatter(x=aylık.iloc[118:].index,y=aylık.iloc[118:,0],mode='lines',name="Aylık Enflasyon Tahmini"))
-fig2.update_traces(line=dict(width=3)) 
-fig2.update_layout(
-    xaxis=dict(tickfont=dict(size=14)),  
-    yaxis=dict(tickfont=dict(size=14))   
-)
+
 fig3 = go.FigureWidget(data=[
 go.Scatter(x=yıllıktahmin["Ortalama"].iloc[:13].index,y=yıllıktahmin["Ortalama"].iloc[:13],mode='lines',name="Enflasyon"),
 go.Scatter(x=yıllıktahmin["Gaussian Regression"].iloc[12:].index,y=yıllıktahmin["Minimum"].iloc[12:],mode='lines',name="Gaussian Regression",line={'dash':'dash'}),
