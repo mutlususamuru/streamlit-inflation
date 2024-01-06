@@ -126,30 +126,29 @@ if page=='Model Bazlı Aylık Tahmin':
          values = [sorted_modelaylık.iloc[0, :][col]]
          text_values = [f'{value:.2f}' for value in values]  # Format values to two decimal places
          fig4.add_trace(go.Bar(
-           x=[col],
-           y=values,
-           marker_color=color,
-           name=col,  
-           textposition='outside',
-           textfont=dict(text=text_values, font=dict(size=15), automargin=True, yref='paper')
-           ))
-         
-    
-    fig4.update_layout(
+        x=[col],
+        y=values,
+        marker_color=color,
+        name=col,  # Use the column name as the trace name
+        text=text_values,  # Display values on top of each bar
+        textposition='outside',  # Position text outside the bar
+    ))
+
+# Update layout
+       fig4.update_layout(
     xaxis=dict(tickmode='array', tickvals=list(range(len(sorted_modelaylık.columns))), ticktext=sorted_modelaylık.columns),
-    title="Model Predictions"
+    title="Model Predictions",
+    font=dict(size=15, color='black', family='Arial', weight='bold')
 )
-    
-    
 
-    fig4.update_layout(showlegend=False)
+       fig4.update_layout(showlegend=False)
 
 
 
-    fig4.update_xaxes(
+       fig4.update_xaxes(
     tickformat="%Y-%m"  
 )
-    st.plotly_chart(fig4)  
+       st.plotly_chart(fig4)  
 
     
 if page == "Hakkında":
