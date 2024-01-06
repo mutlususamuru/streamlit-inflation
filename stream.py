@@ -88,8 +88,8 @@ if page=='Yıllık Enflasyon':
         button[title^=Exit]+div [data-testid=stImage]{
             text-align: left;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: %10;
+            margin-right: %0;
             width: 100%;
         }
     </style>
