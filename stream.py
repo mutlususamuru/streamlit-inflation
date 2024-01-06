@@ -145,7 +145,7 @@ if page=='Model Bazlı Aylık Tahmin':
 )
    
        
-       fig4.update_layout(width=len(sorted_modelaylık.columns) * 100)
+       fig4.update_layout(width=len(sorted_modelaylık.columns) * 100,showlegend=False)
        st.plotly_chart(fig4)  
 
     
