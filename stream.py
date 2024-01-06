@@ -103,6 +103,9 @@ if page=='Aylık Enflasyon':
 if page=='Model Bazlı Tahmin':
     st.markdown("<h1 style='text-align:left;'>Model Bazlı Tahmin</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig3)
+if page=='Model Bazlı Aylık Tahmin':
+    selected_model = st.sidebar.selectbox("Select Model", ["Linear Regression", "Other Model"])
+    
 if page == "Hakkında":
     st.write("Geliştirici : Bora Kaya")
 
