@@ -136,7 +136,7 @@ if page=='Model Bazlı Aylık Tahmin':
     labels={'y': 'Tahmin','x':'Model'},
     title="Model Predictions"
 )
-       
+       fig4.update_layout(coloraxis_showscale=False)
 
 # Update layout
          
