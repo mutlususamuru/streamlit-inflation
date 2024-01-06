@@ -87,7 +87,7 @@ if page=='Yıllık Enflasyon':
     """
     <style>
         .element-container {
-            width: 80%;
+            width: 60%;
         }
     </style>
     """,
