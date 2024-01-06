@@ -129,11 +129,10 @@ if page=='Model Bazlı Aylık Tahmin':
            x=[col],
            y=values,
            marker_color=color,
-           name=col,  # Use the column name as the trace name
-           text=text_values,  # Display values on top of each bar
-           textposition='outside',  # Position text outside the bar
-
-    ))
+           name=col,  
+           textposition='outside',
+           textfont=dict(text=text_values, font=dict(size=15), automargin=True, yref='paper')
+           ))
          
     
     fig4.update_layout(
