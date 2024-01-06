@@ -140,9 +140,7 @@ if page=='Model Bazlı Aylık Tahmin':
     xaxis=dict(tickmode='array', tickvals=list(range(len(sorted_modelaylık.columns))), ticktext=sorted_modelaylık.columns),
     title="Model Predictions"
 )
-    fig4.update_layout(
-    title=dict(text=text_values, font=dict(size=50), automargin=True, yref='paper')
-)
+    
     
 
     fig4.update_layout(showlegend=False)
