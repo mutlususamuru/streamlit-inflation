@@ -73,6 +73,7 @@ fig2.update_layout(font=dict(family="Arial Black", size=20, color="black"))
 fig2.update_xaxes(
     tickformat="%Y-%m"  # Adjust the format as needed
 )
+fig2.update_layout(width=1000, height=600) 
 
 
 
