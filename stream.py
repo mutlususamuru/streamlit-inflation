@@ -63,7 +63,7 @@ fig2.update_xaxes(
 
 
 
-fig1.update_layout(width=1200, height=600)  
+fig1.update_layout(width=1000, height=600)  
 
 fig3 = go.FigureWidget(data=[
 go.Scatter(x=yıllıktahmin["Ortalama"].iloc[:13].index,y=yıllıktahmin["Ortalama"].iloc[:13],mode='lines',name="Enflasyon"),
@@ -85,15 +85,18 @@ if page=='Yıllık Enflasyon':
     st.markdown(
     """
     <style>
-        .css-1aetfd6 {
-            margin-left: -20%;
+        button[title^=Exit]+div [data-testid=stImage]{
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
         }
     </style>
-    """,
-    unsafe_allow_html=True,
+    """, unsafe_allow_html=True
 )
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
-    st.plotly_chart(fig1, use_container_width=True)
+    st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
     st.markdown("<h1 style='text-align:left;'>Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig2)
