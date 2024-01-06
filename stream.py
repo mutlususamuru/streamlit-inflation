@@ -120,6 +120,10 @@ if page=='Model Bazlı Aylık Tahmin':
     if selected_model=='Ocak 2024':
        sorted_index = modelaylık.iloc[0, :].sort_values(ascending=False).index
        sorted_modelaylık = modelaylık[sorted_index]
+       custom_colors = px.colors.qualitative.Set1[:len(sorted_modelaylık.columns)]
+
+# Create a dictionary to map each column to a color
+       color_mapping = dict(zip(sorted_modelaylık.columns, custom_colors))
 
 
 
@@ -129,8 +133,7 @@ if page=='Model Bazlı Aylık Tahmin':
     y=sorted_modelaylık.iloc[0, :].values,
     labels={'y': 'Tahmin','x':'Model'},
     title="Ocak Ayı Enflasyon Tahminleri",
-    color=sorted_modelaylık.columns,
-    color_discrete_sequence=px.colors.qualitative.Set1
+    color_discrete_map=color_mapping
 )
 
        fig4.update_xaxes(
