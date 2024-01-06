@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
+import numpy as np
 st.set_page_config(page_title="Türkiye Enflasyon Tahmini")
 tabs=["Yıllık Enflasyon","Aylık Enflasyon","Model Bazlı Tahmin","Model Bazlı Aylık Tahmin","Metodoloji","Hakkında"]
 page=st.sidebar.radio("Sekmeler",tabs)
@@ -128,7 +129,8 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
     y=sorted_modelaylık.iloc[0, :].values,
-    color_discrete_map={'lifeExp': 'blue'},
+    color=np.arange(len(sorted_modelaylık.columns)),
+    color_continuous_scale=color_map,
     labels={'y': 'Tahmin'},
     title="Model Predictions"
 )
