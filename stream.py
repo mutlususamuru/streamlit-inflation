@@ -123,21 +123,25 @@ if page=='Model Bazlı Aylık Tahmin':
        custom_colors = px.colors.qualitative.Set1[:len(sorted_modelaylık.columns)]
        fig4 = go.Figure()
        for col, color in zip(sorted_modelaylık.columns, custom_colors):
-          fig4.add_trace(go.Bar(
-          x=[col],
-          y=[sorted_modelaylık.iloc[0, :][col]],
-          marker_color=color,
-          name=col  # Use the column name as the trace name
+         values = [sorted_modelaylık.iloc[0, :][col]]
+         text_values = [f'{value:.2f}' for value in values]  # Format values to two decimal places
+         fig4.add_trace(go.Bar(
+        x=[col],
+        y=values,
+        marker_color=color,
+        name=col,  # Use the column name as the trace name
+        text=text_values,  # Display values on top of each bar
+        textposition='outside'  # Position text outside the bar
     ))
-          fig4.update_layout(
+    fig4.update_layout(
     xaxis=dict(tickmode='array', tickvals=list(range(len(sorted_modelaylık.columns))), ticktext=sorted_modelaylık.columns),
     title="Model Predictions"
 )
-          fig4.update_layout(showlegend=False)
+    fig4.update_layout(showlegend=False)
 
 
 
-          fig4.update_xaxes(
+    fig4.update_xaxes(
     tickformat="%Y-%m"  
 )
        st.plotly_chart(fig4)  
