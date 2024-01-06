@@ -19,6 +19,13 @@ df=df.set_index(df["Unnamed: 0"])
 del df["Unnamed: 0"]
 df=df.rename_axis(["Tarih"])
 
+modelaylık=pd.read_csv('modelaylık.csv')
+modelaylık=modelaylık.set_index(aylık["Unnamed: 0"])
+del modelaylık["Unnamed: 0"]
+modelaylık=modelaylık.rename_axis(["Tarih"])
+
+
+
 
 
 dfas=pd.read_csv("dfas.csv")
@@ -57,7 +64,7 @@ fig2.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon
 fig2.update_xaxes(
     tickformat="%Y-%m"  # Adjust the format as needed
 )
-# Show the combined figure
+
 
 
 
@@ -81,6 +88,10 @@ fig3.update_layout(
     xaxis=dict(tickfont=dict(size=14)),  
     yaxis=dict(tickfont=dict(size=14))   
 )
+
+
+
+
 if page=='Yıllık Enflasyon':
     st.markdown(
     """
@@ -104,7 +115,14 @@ if page=='Model Bazlı Tahmin':
     st.markdown("<h1 style='text-align:left;'>Model Bazlı Tahmin</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig3)
 if page=='Model Bazlı Aylık Tahmin':
-    selected_model = st.sidebar.selectbox("Select Model", ["Linear Regression", "Other Model"])
+    selected_model = st.sidebar.selectbox("Select Model", ["Ocak 2024", "Other"])
+    if selected_model=='Ocak 2024':
+       fig2 = px.bar(modelaylık.iloc[0,:], x=modelaylık.columns, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'})
+
+       fig2.update_xaxes(
+    tickformat="%Y-%m"  
+)
+
     
 if page == "Hakkında":
     st.write("Geliştirici : Bora Kaya")
