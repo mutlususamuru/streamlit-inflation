@@ -117,11 +117,12 @@ if page=='Model Bazlı Tahmin':
 if page=='Model Bazlı Aylık Tahmin':
     selected_model = st.sidebar.selectbox("Select Model", ["Ocak 2024", "Other"])
     if selected_model=='Ocak 2024':
-       fig2 = px.bar(modelaylık.iloc[0,:], x=modelaylık.columns, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'})
+       fig4 = px.bar(modelaylık.iloc[0,:], x=modelaylık.columns, y=["SGD Regressor","Linear Regression","Lasso Regression","Lars Regression","Kernel Regression","Gaussian Regression","Bayessian Regression","LSTM","Robust Regression","Ortalama"])
 
-       fig2.update_xaxes(
+       fig4.update_xaxes(
     tickformat="%Y-%m"  
 )
+       st.plotly_chart(fig4)  
 
     
 if page == "Hakkında":
