@@ -20,7 +20,7 @@ del df["Unnamed: 0"]
 df=df.rename_axis(["Tarih"])
 
 modelaylık=pd.read_csv('modelaylık.csv')
-modelaylık=modelaylık.set_index(aylık["Unnamed: 0"])
+modelaylık=modelaylık.set_index(modelaylık["Unnamed: 0"])
 del modelaylık["Unnamed: 0"]
 modelaylık=modelaylık.rename_axis(["Tarih"])
 
