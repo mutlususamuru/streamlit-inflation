@@ -120,7 +120,7 @@ if page=='Model Bazlı Aylık Tahmin':
     if selected_model=='Ocak 2024':
        sorted_index = modelaylık.iloc[0, :].sort_values(ascending=False).index
        sorted_modelaylık = modelaylık[sorted_index]
-       custom_colors = px.colors.qualitative.Set1[:len(sorted_modelaylık.columns)]
+       custom_colors = px.colors.qualitative.Set1[:len(sorted_modelaylık.columns)+1]
        fig4 = go.Figure()
        for col, color in zip(sorted_modelaylık.columns, custom_colors):
          values = [sorted_modelaylık.iloc[0, :][col]]
