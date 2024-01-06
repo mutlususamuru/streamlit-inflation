@@ -142,7 +142,6 @@ if page=='Model Bazlı Aylık Tahmin':
        showlegend=False
 )
        fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
-       fig4.update_layout(width=len(sorted_modelaylık.columns) * 100)
        st.plotly_chart(fig4) 
     if selected_model=='Şubat 2024':
        sorted_index = modelaylık.iloc[1, :].sort_values(ascending=False).index
