@@ -82,6 +82,13 @@ fig3.update_layout(
 )
 if page=='Yıllık Enflasyon':
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
+    st.markdown("""
+    <style>
+        .css-1aetfd6 {
+            margin-left: -20%;
+        }
+    </style>
+""", unsafe_allow_html=True)
     st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
     st.markdown("<h1 style='text-align:left;'>Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
