@@ -128,7 +128,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
     y=sorted_modelaylık.iloc[0, :].values,
-    color=sorted_modelaylık.iloc[0, :]['lifeExp'],
+    color=y['lifeExp'],
     labels={'y': 'Tahmin'},
     title="Model Predictions"
 )
