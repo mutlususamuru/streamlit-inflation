@@ -37,8 +37,9 @@ fig1.update_layout(font_family="Arial Black",
                    font_size=14
 
 )
-fig2 = go.Figure(go.Bar(px.bar(aylık,x=aylık.index, y=aylık["Aylık Enflasyon"].values)
-))
+fig2 = go.Figure(go.Bar(px.bar(aylık, x=aylık.index, y=aylık["Aylık Enflasyon"].values)))
+
+
 
 
 fig1.update_layout(width=800, height=600)  
