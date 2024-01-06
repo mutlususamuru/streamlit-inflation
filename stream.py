@@ -37,7 +37,7 @@ fig1.update_layout(font_family="Arial Black",
                    font_size=14
 
 )
-fig2 = go.Figure(go.Bar(px.bar(x=aylık.index, y=aylık)
+fig2 = go.Figure(go.Bar(px.bar(aylık["TÜFE"],x=aylık.index, y=aylık)
 ))
 
 
