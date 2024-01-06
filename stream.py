@@ -135,20 +135,27 @@ if page=='Model Bazlı Aylık Tahmin':
     ))
 
 # Update layout
-    fig4.update_layout(
-    xaxis=dict(tickmode='array', tickvals=list(range(len(sorted_modelaylık.columns))), ticktext=sorted_modelaylık.columns),
-    title="Model Predictions",
-    font=dict(size=15, color='black', family='Arial', weight='bold')
+         
+         fig4.update_xaxes(
+    tickmode='array',
+    tickvals=list(range(len(sorted_modelaylık.columns))),
+    ticktext=sorted_modelaylık.columns,
+    tickfont=dict(size=15, color='black', family='Arial', weight='bold')
 )
+         fig4.update_layout(
+    title="Model Predictions",
+    showlegend=False
+)
+    
 
-    fig4.update_layout(showlegend=False)
+    
 
 
 
-    fig4.update_xaxes(
+       fig4.update_xaxes(
     tickformat="%Y-%m"  
 )
-    st.plotly_chart(fig4)  
+       st.plotly_chart(fig4)  
 
     
 if page == "Hakkında":
