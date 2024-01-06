@@ -37,10 +37,7 @@ fig1.update_layout(font_family="Arial Black",
                    font_size=14
 
 )
-fig2 = go.Figure(go.Bar(
-    x=aylık.index[-12:],
-    y=aylık[-12:],
-    marker_color='red'
+fig2 = go.Figure(go.Bar(px.bar(aylık, x=aylık.index, y=aylık)
 ))
 
 
