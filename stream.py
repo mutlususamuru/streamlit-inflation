@@ -28,6 +28,7 @@ modelaylık=modelaylık.rename_axis(["Tarih"])
 
 
 
+
 dfas=pd.read_csv("dfas.csv")
 dfas=dfas.set_index(dfas["Unnamed: 0"])
 del dfas["Unnamed: 0"]
@@ -120,7 +121,7 @@ if page=='Model Bazlı Aylık Tahmin':
     if selected_model=='Ocak 2024':
        sorted_index = modelaylık.iloc[0, :].sort_values(ascending=False).index
        sorted_modelaylık = modelaylık[sorted_index]
-       custom_colors = px.colors.qualitative.Set1[:len(sorted_modelaylık.columns)+1]
+       custom_colors = px.colors.qualitative.Set1[:len(sorted_modelaylık.columns)]
        fig4 = go.Figure()
        for col, color in zip(sorted_modelaylık.columns, custom_colors):
          values = [sorted_modelaylık.iloc[0, :][col]]
@@ -150,6 +151,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4.update_xaxes(
        tickformat="%Y-%m"  
 )
+       fig4.update_layout(width=len(sorted_modelaylık.columns) * 100)
        st.plotly_chart(fig4)  
 
     
