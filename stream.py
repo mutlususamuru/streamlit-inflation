@@ -92,7 +92,7 @@ fig3.update_layout(
     yaxis=dict(tickfont=dict(size=14)),
     font=dict(family="Arial", size=14, color="black")
 )
-fig1.update_xaxes(
+fig3.update_xaxes(
     tickformat="%Y-%m",  # Adjust the format as needed
     tickmode="linear",
     tickangle=45,
