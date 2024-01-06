@@ -82,8 +82,18 @@ fig3.update_layout(
     yaxis=dict(tickfont=dict(size=14))   
 )
 if page=='Yıllık Enflasyon':
-    st.beta_set_page_config(
-layout="wide",
+    st.markdown(
+    """
+    <style>
+        button[title^=Exit]+div [data-testid=stImage]{
+            text-align: left;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    </style>
+    """, unsafe_allow_html=True
 )
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
