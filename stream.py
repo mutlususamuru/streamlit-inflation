@@ -68,8 +68,7 @@ fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle
 next_12_months = aylık.iloc[-12:].copy()
 
 fig2.add_trace(go.Bar(x=next_12_months.index, y=next_12_months["Aylık Enflasyon"], name="Tahmin",text=next_12_months["Aylık Enflasyon"]))
-fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
-fig2.update_layout(font=dict(family="Arial Black", size=20, color="black"))
+fig2.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0,textfont=dict(size=14))
 fig2.update_xaxes(
     tickformat="%Y-%m"  # Adjust the format as needed
 )
