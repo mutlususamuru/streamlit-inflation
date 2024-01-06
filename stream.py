@@ -121,22 +121,23 @@ if page=='Model Bazlı Aylık Tahmin':
        sorted_index = modelaylık.iloc[0, :].sort_values(ascending=False).index
        sorted_modelaylık = modelaylık[sorted_index]
        custom_colors = px.colors.qualitative.Set1[:len(sorted_modelaylık.columns)]
-
-# Create a dictionary to map each column to a color
-       color_mapping = dict(zip(sorted_modelaylık.columns, custom_colors))
-
-
-
-# Create a bar chart using Plotly Express
-       fig4 = px.bar(
-    x=sorted_modelaylık.columns,
-    y=sorted_modelaylık.iloc[0, :].values,
-    labels={'y': 'Tahmin','x':'Model'},
-    title="Ocak Ayı Enflasyon Tahminleri",
-    color_discrete_map=color_mapping
+       fig4 = go.Figure()
+       for col, color in zip(sorted_modelaylık.columns, custom_colors):
+          fig4.add_trace(go.Bar(
+          x=[col],
+          y=[sorted_modelaylık.iloc[0, :][col]],
+          marker_color=color,
+          name=col  # Use the column name as the trace name
+    ))
+          fig4.update_layout(
+    xaxis=dict(tickmode='array', tickvals=list(range(len(sorted_modelaylık.columns))), ticktext=sorted_modelaylık.columns),
+    title="Model Predictions"
 )
+          fig4.update_layout(showlegend=False)
 
-       fig4.update_xaxes(
+
+
+          fig4.update_xaxes(
     tickformat="%Y-%m"  
 )
        st.plotly_chart(fig4)  
