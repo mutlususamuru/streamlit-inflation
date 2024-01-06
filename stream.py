@@ -118,8 +118,15 @@ if page=='Model Bazlı Aylık Tahmin':
     st.markdown("<h1 style='text-align:left;'>Model Bazlı Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     selected_model = st.sidebar.selectbox("Tarih", ["Ocak 2024", "Other"])
     if selected_model=='Ocak 2024':
-       
-       fig4 = px.bar(modelaylık.iloc[0,:].sort_values(ascending=False), x=modelaylık.columns, y=modelaylık.values,labels={'y':'Tahmin'})
+       sorted_modelaylık = modelaylık.iloc[:, modelaylık.iloc[0, :].argsort(ascending=False)]
+
+# Create a bar chart using Plotly Express
+       fig4 = px.bar(
+    x=sorted_modelaylık.columns,
+    y=sorted_modelaylık.iloc[0, :].values,
+    labels={'y': 'Tahmin'},
+    title="Model Predictions"
+)
 
        fig4.update_xaxes(
     tickformat="%Y-%m"  
