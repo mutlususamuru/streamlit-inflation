@@ -73,7 +73,10 @@ fig2.update_layout(font=dict(family="Arial Black", size=20, color="black"),xaxis
         title_font=dict(family="Arial Black", size=14, color="black"),
         tickfont=dict(size=14, family="Arial Black", color="black")
     ),  
-    yaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")))
+    yaxis=dict(
+        title_font=dict(family="Arial Black", size=14, color="black"),
+        tickfont=dict(size=14, family="Arial Black", color="black")
+    ))
 fig2.update_xaxes(
     tickformat="%Y-%m"  # Adjust the format as needed
 )
