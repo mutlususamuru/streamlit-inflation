@@ -36,7 +36,7 @@ del dfas["Unnamed: 0"]
 dfas=dfas.rename_axis(["Tarih"])
 
 fig1 = go.Figure()
-fig1.add_trace(go.Scatter(x=yıllıktahmin.index[1:24],y=yıllıktahmin["Ortalama"].iloc[1:24],mode='lines',name="Enflasyon"))
+fig1.add_trace(go.Scatter(x=yıllıktahmin.index[:24],y=yıllıktahmin["Ortalama"].iloc[:24],mode='lines',name="Enflasyon"))
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[23:-2],y=yıllıktahmin["Ortalama"].iloc[23:-2],mode='lines',line_color='red',line=dict(dash='dash')))
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[24:-2],y=yıllıktahmin["Ortalama"].iloc[24:-2],mode='markers',name="Tahmin",marker=dict(size=10, color='orange')))
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[20:24],y=[61.94,60.84,62.18,64.70],mode='markers',name="Geçmiş Tahminler",line_color="black"))
@@ -54,6 +54,9 @@ fig1.update_xaxes(
     tickangle=45,
     tick0=yıllıktahmin.index[1],  # Set the starting tick to the first date in your data
     dtick="M2"  # Set the tick interval to 2 months
+)
+fig1.update_xaxes(
+    range=[yıllıktahmin.index[1], yıllıktahmin.index[-2]]  # Set the range from the first to the last date in your data
 )
 
 
