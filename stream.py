@@ -127,7 +127,7 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
     y=sorted_modelaylık.iloc[0, :].values,
-    labels={'y': 'Tahmin'},
+    labels={'y': 'Tahmin','x':'Model'},
     title="Model Predictions"
 )
 
