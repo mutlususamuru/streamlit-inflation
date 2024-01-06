@@ -126,6 +126,7 @@ if page=='Model Bazlı Aylık Tahmin':
        sorted_modelaylık = modelaylık[sorted_index]
 
 # Set custom colors for each bar
+       color_map = px.colors.sequential.Viridis
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
     y=sorted_modelaylık.iloc[0, :].values,
