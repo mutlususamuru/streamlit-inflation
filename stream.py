@@ -115,9 +115,10 @@ if page=='Model Bazlı Tahmin':
     st.markdown("<h1 style='text-align:left;'>Model Bazlı Tahmin</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig3)
 if page=='Model Bazlı Aylık Tahmin':
+    st.markdown("<h1 style='text-align:left;'>Model Bazlı Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     selected_model = st.sidebar.selectbox("Select Model", ["Ocak 2024", "Other"])
     if selected_model=='Ocak 2024':
-       fig4 = px.bar(modelaylık.iloc[0,:], x=modelaylık.columns, y=modelaylık.iloc[0,:].values)
+       fig4 = px.bar(modelaylık.iloc[0,:], x=modelaylık.columns, y=modelaylık.iloc[0,:].values,labels={'y':'Tahmin'})
 
        fig4.update_xaxes(
     tickformat="%Y-%m"  
