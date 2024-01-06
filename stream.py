@@ -182,17 +182,20 @@ if page=='Model Bazlı Aylık Tahmin':
        fig4 = px.bar(
     x=sorted_modelaylık.columns,
     y=sorted_modelaylık.iloc[2, :].values,
+    text=sorted_modelaylık.iloc[2, :].values,
     color=np.arange(len(sorted_modelaylık.columns)),
     color_continuous_scale='Rainbow',
     labels={'y': 'Tahmin','x':'Model'},
     title="Model Predictions"
 )
+       fig4.update_layout(width=800, height=600)
        fig4.update_layout(coloraxis_showscale=False)
        fig4.update_layout(
        title="Mart Ayı Enflasyon Tahmini",
        showlegend=False
 )
-       fig4.update_layout(width=len(sorted_modelaylık.columns) * 100)
+       fig4.update_traces(texttemplate='%{text:.2f}', textposition='outside', textangle=0)
+       fig4.update_layout(font=dict(family="Arial Black", size=14, color="black"))
        st.plotly_chart(fig4)
 
     
