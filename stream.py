@@ -147,7 +147,7 @@ if page=='Yıllık Enflasyon':
 if page=='Aylık Enflasyon':
     st.markdown("<h1 style='text-align:left;'>Aylık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig2)
-if page=='Model Bazlı Tahmin':
+if page=='Model Bazlı Yıllık Tahmin':
     st.markdown("<h1 style='text-align:left;'>Model Bazlı Tahmin</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig3)
 if page=='Model Bazlı Aylık Tahmin':
