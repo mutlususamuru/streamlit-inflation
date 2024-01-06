@@ -119,7 +119,7 @@ if page=='Model Bazlı Aylık Tahmin':
     selected_model = st.sidebar.selectbox("Tarih", ["Ocak 2024", "Other"])
     if selected_model=='Ocak 2024':
        
-       fig4 = px.bar(modelaylık.iloc[0,:], x=modelaylık.columns, y=modelaylık.iloc[0,:].sort_values(ascending=False).values,labels={'y':'Tahmin'})
+       fig4 = px.bar(modelaylık.iloc[0,:], x=modelaylık.iloc[0,:].sort_values(ascending=False).columns, y=modelaylık.iloc[0,:].sort_values(ascending=False).values,labels={'y':'Tahmin'})
 
        fig4.update_xaxes(
     tickformat="%Y-%m"  
