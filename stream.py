@@ -132,6 +132,8 @@ if page=='Model Bazlı Aylık Tahmin':
            name=col,  # Use the column name as the trace name
            text=text_values,  # Display values on top of each bar
            textposition='outside',  # Position text outside the bar
+           textfont=dict(size=15, color='black', family='Arial', weight='bold')
+
     ))
          
     
@@ -139,7 +141,7 @@ if page=='Model Bazlı Aylık Tahmin':
     xaxis=dict(tickmode='array', tickvals=list(range(len(sorted_modelaylık.columns))), ticktext=sorted_modelaylık.columns),
     title="Model Predictions"
 )
-    fig4.update_traces(textfont=dict(size=15, color='black', family='Arial', weight='bold'))
+    
 
     fig4.update_layout(showlegend=False)
 
