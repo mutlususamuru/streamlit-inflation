@@ -34,7 +34,7 @@ fig1.add_trace(go.Scatter(x=yıllıktahmin.index[20:24],y=[61.94,60.84,62.18,64.
 fig1.update_traces(line=dict(width=3)) 
 fig1.update_layout(font_family="Arial Black",
                    font_color="black",
-                   font_size=14
+                   font_size=14,height=500,  width=800
 
 )
 fig1.update_xaxes(
