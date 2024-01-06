@@ -75,7 +75,7 @@ fig2.update_xaxes(
 fig1.update_layout(width=1000, height=600)  
 
 fig3 = go.FigureWidget(data=[
-go.Scatter(x=yıllıktahmin["Ortalama"].iloc[:24].index,y=yıllıktahmin["Ortalama"].iloc[:24],mode='lines',name="Enflasyon"),
+go.Scatter(x=yıllıktahmin["Ortalama"].iloc[1:24].index,y=yıllıktahmin["Ortalama"].iloc[1:24],mode='lines',name="Enflasyon"),
 go.Scatter(x=yıllıktahmin["Gaussian Regression"].iloc[23:-2].index,y=yıllıktahmin["Minimum"].iloc[23:],mode='lines',name="Gaussian Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["SGD Regressor"].iloc[23:-2].index,y=yıllıktahmin["Maksimum"].iloc[23:],mode='lines',name="SGD Regressor",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[23:-2].index,y=yıllıktahmin["Lasso Regression"].iloc[23:],mode='lines',name="Lasso Regression",line={'dash':'dash'}),
