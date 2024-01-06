@@ -130,6 +130,7 @@ if page=='Model Bazlı Aylık Tahmin':
     labels={'y': 'Tahmin','x':'Model'},
     title="Ocak Ayı Enflasyon Tahminleri",
     color=sorted_modelaylık.columns,
+    show_legend=False
 )
 
        fig4.update_xaxes(
