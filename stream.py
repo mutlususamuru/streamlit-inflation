@@ -128,7 +128,8 @@ if page=='Model Bazlı Aylık Tahmin':
     x=sorted_modelaylık.columns,
     y=sorted_modelaylık.iloc[0, :].values,
     labels={'y': 'Tahmin','x':'Model'},
-    title="Ocak Ayı Enflasyon Tahminleri"
+    title="Ocak Ayı Enflasyon Tahminleri",
+    color=sorted_modelaylık.columns,
 )
 
        fig4.update_xaxes(
