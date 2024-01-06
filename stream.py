@@ -78,7 +78,7 @@ fig2.update_xaxes(
     tickformat="%Y-%m",  # Adjust the format as needed
     tickmode="linear",
     tickangle=45,
-    tick0=aylık.index[-24],  # Set the starting tick to the first date in your data
+    tick0=aylık.index[-23],  # Set the starting tick to the first date in your data
     dtick="M2"  # Set the tick interval to 2 months
 )
 
