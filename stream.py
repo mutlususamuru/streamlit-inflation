@@ -506,7 +506,8 @@ if page == "Metodoloji":
             "<p>5) Lasso Regresyon</p>"
             "<p>6) Lars Regresyon</p>"
             "<p>7) SGD Regresyon</p>"
-            "<p>8) LSTM</p>"
+            "<p>9) Robust Regresyon</p>"
+            "<p>10) LSTM</p>"
             "</div>", unsafe_allow_html=True)
 
 
