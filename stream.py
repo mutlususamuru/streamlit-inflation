@@ -117,7 +117,7 @@ if page=='Model Bazlı Tahmin':
 if page=='Model Bazlı Aylık Tahmin':
     selected_model = st.sidebar.selectbox("Select Model", ["Ocak 2024", "Other"])
     if selected_model=='Ocak 2024':
-       fig4 = px.bar(modelaylık.iloc[0,:], x=modelaylık.columns, y=["SGD Regressor","Linear Regression","Lasso Regression","Lars Regression","Kernel Regression","Gaussian Regression","Bayessian Regression","LSTM","Robust Regression","Ortalama"])
+       fig4 = px.bar(modelaylık.iloc[0,:], x=modelaylık.columns, y=modelaylık.iloc[0,:].values)
 
        fig4.update_xaxes(
     tickformat="%Y-%m"  
