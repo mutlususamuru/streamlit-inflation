@@ -85,7 +85,7 @@ if page=='Yıllık Enflasyon':
     st.markdown("""
     <style>
         .css-1aetfd6 {
-            margin-left: -20%;
+            margin-left: -80%;
         }
     </style>
 """, unsafe_allow_html=True)
