@@ -126,16 +126,15 @@ if page=='Model Bazlı Aylık Tahmin':
          values = [sorted_modelaylık.iloc[0, :][col]]
          text_values = [f'{value:.2f}' for value in values]  # Format values to two decimal places
          fig4.add_trace(go.Bar(
-        x=[col],
-        y=values,
-        marker_color=color,
-        name=col,  # Use the column name as the trace name
-        text=text_values,  # Display values on top of each bar
-        textposition='outside'  # Position text outside the bar
-        textposition='outside',  # Position text outside the bar
-        textfont=dict(
+           x=[col],
+           y=values,
+           marker_color=color,
+           name=col,  # Use the column name as the trace name
+           text=text_values,  # Display values on top of each bar
+           textposition='outside',  # Position text outside the bar
+           textfont=dict(
             family='Arial',  # Set the font family (change as needed)
-            size=20,  # Set the font size
+            size=14,  # Set the font size
             color='black',  # Set the font color
             weight='bold'  # Make the text bold
         )
