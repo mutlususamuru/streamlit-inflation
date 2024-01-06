@@ -132,7 +132,7 @@ if page=='Model Bazlı Aylık Tahmin':
     y=sorted_modelaylık.iloc[0, :].values,
     color=np.arange(len(sorted_modelaylık.columns)),
     color_continuous_scale='Rainbow',
-    labels={'y': 'Tahmin'},
+    labels={'y': 'Tahmin','x':'Model'},
     title="Model Predictions"
 )
 
