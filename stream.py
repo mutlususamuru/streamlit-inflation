@@ -41,10 +41,11 @@ fig1.add_trace(go.Scatter(x=yıllıktahmin.index[23:-2],y=yıllıktahmin["Ortala
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[24:-2],y=yıllıktahmin["Ortalama"].iloc[24:-2],mode='markers',name="Tahmin",marker=dict(size=10, color='orange')))
 fig1.add_trace(go.Scatter(x=yıllıktahmin.index[20:24],y=[61.94,60.84,62.18,64.70],mode='markers',name="Geçmiş Tahminler",line_color="black"))
 fig1.update_traces(line=dict(width=3)) 
-fig1.update_layout(font_family="Arial Black",
-                   font_color="black",
-                   font_size=14
 
+fig1.update_layout(
+    xaxis=dict(tickfont=dict(size=14, family="Arial Black", color="black")),  
+    yaxis=dict(tickfont=dict(size=14)),
+    font=dict(family="Arial", size=14, color="black")
 )
 
 fig1.update_xaxes(
