@@ -125,15 +125,12 @@ if page=='Model Bazlı Aylık Tahmin':
        sorted_modelaylık = modelaylık[sorted_index]
 
 # Set custom colors for each bar
-       custom_colors = px.colors.qualitative.Set1[:len(sorted_modelaylık.columns)]
-       fig4 = go.Figure()
-       for col, color in zip(sorted_modelaylık.columns, custom_colors):
-         fig4.add_trace(go.Bar(
-        x=[col],
-        y=[sorted_modelaylık.iloc[0, :][col]],
-        marker_color=color,
-        name=col  # Use the column name as the trace name
-    ))
+       fig4 = px.bar(
+    x=sorted_modelaylık.columns,
+    y=sorted_modelaylık.iloc[0, :].values,
+    labels={'y': 'Tahmin'},
+    title="Model Predictions"
+)
 
 # Update layout
          
