@@ -132,12 +132,6 @@ if page=='Model Bazlı Aylık Tahmin':
            name=col,  # Use the column name as the trace name
            text=text_values,  # Display values on top of each bar
            textposition='outside',  # Position text outside the bar
-           textfont=dict(
-              family='Arial',  # Set the font family (change as needed)
-              size=14,  # Set the font size
-              color='black',  # Set the font color
-              weight='bold'  # Make the text bold
-        )
     ))
          
     
