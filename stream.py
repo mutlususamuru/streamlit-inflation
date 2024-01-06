@@ -144,7 +144,7 @@ if page=='Model Bazlı Aylık Tahmin':
     fig4.update_xaxes(
     tickformat="%Y-%m"  
 )
-       st.plotly_chart(fig4)  
+    st.plotly_chart(fig4)  
 
     
 if page == "Hakkında":
