@@ -61,7 +61,7 @@ fig1.update_xaxes(
 
 
 last_12_months = aylık.iloc[-24:-12]
-fig2 = px.bar(last_12_months, x=last_12_months.index, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'})
+fig2 = px.bar(last_12_months, x=last_12_months.index, y="Aylık Enflasyon", labels={'y': 'Aylık Enflasyon'},text=last_12_months.values,)
 
 # Filter the next 12 months for predictions
 next_12_months = aylık.iloc[-12:].copy()
