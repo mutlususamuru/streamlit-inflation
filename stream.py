@@ -82,7 +82,7 @@ fig3.update_layout(
     yaxis=dict(tickfont=dict(size=14))   
 )
 if page=='Yıllık Enflasyon':
-    st.set_page_config(page_title="My App",layout='wide')
+    st.set_page_config(page_title="Yıllık Enflasyon",layout='wide')
     st.markdown("<h1 style='text-align:left;'>Yıllık Enflasyon Tahmini</h1>",unsafe_allow_html=True)
     st.plotly_chart(fig1)
 if page=='Aylık Enflasyon':
