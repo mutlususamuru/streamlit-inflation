@@ -104,7 +104,6 @@ go.Scatter(x=yıllıktahmin["Lasso Regression"].iloc[23:-2].index,y=yıllıktahm
 go.Scatter(x=yıllıktahmin["Lars Regression"].iloc[23:-2].index,y=yıllıktahmin["Lars Regression"].iloc[23:],mode='lines',name="Lars Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Kernel Regression"].iloc[23:-2].index,y=yıllıktahmin["Kernel Regression"].iloc[23:],mode='lines',name="Kernel Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Bayessian Regression"].iloc[23:-2].index,y=yıllıktahmin["Bayessian Regression"].iloc[23:],mode='lines',name="Bayessian Regression",line={'dash':'dash'}),
-go.Scatter(x=yıllıktahmin["LSTM"].iloc[23:-2].index,y=yıllıktahmin["LSTM"].iloc[23:],mode='lines',name="LSTM",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Linear Regression"].iloc[23:-2].index,y=yıllıktahmin["Linear Regression"].iloc[23:],mode='lines',name="Linear Regression",line={'dash':'dash'}),
 go.Scatter(x=yıllıktahmin["Robust Regression"].iloc[23:-2].index,y=yıllıktahmin["Robust Regression"].iloc[23:],mode='lines',name="Robust Regression",line={'dash':'dash'})
 ])
